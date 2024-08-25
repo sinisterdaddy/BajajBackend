@@ -1,2 +1,4 @@
-Flask==2.3.2
+Flask==3.0.3
 gunicorn==21.2.0
+os==0.1.0
+flask-cors==3.1.1

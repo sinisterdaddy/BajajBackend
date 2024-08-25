@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import os
+
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 @app.route('/bfhl', methods=['POST'])
 def process_data():
@@ -37,4 +40,3 @@ def get_operation_code():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-
